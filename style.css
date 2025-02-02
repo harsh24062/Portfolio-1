@@ -16,10 +16,6 @@ html{
     scroll-behavior: smooth;
 }
 
-p{
-    color:lime;
-}
-
 a,.btn{
     transition: all 300ms ease;
 }
@@ -132,3 +128,176 @@ a:hover{
     transform: rotate(-45deg) translate(10px,-5px);
 }
 
+/* SECTION */
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+/* Profile */
+
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section_pic-container{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin-top: 5rem;
+    margin-right: 3rem;
+    display: inline-block;
+   opacity: 0;
+   animation: waveTyping 2.5s ease-in-out forwards;
+}
+
+@keyframes waveTyping {
+    from {
+      opacity: 0;
+      transform: translateY(10px); /* Starts slightly lower */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.section_text{
+    margin-top: 7rem;
+    align-items: center;
+    text-align: center;
+    margin-right: 3rem;
+}
+
+.section_text p{
+  font-weight: 600;
+}
+
+h1{  
+    margin-left: 0.5rem;
+    display: inline-block;
+    opacity: 0; /* Start invisible */
+    animation: fadeTyping 2s steps(30, end) forwards; 
+}
+
+.section_text_p1{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 0.75rem;
+    display: inline-block;
+    opacity: 0; /* Start invisible */
+    animation: fadeTyping 2s steps(30, end) forwards;
+}
+
+@keyframes fadeTyping {
+    from {
+      opacity: 0;
+      filter: blur(3px); /* Blurry start */
+    }
+    to {
+      opacity: 1;
+      filter: blur(0); /* Clear text */
+    }
+  }
+
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    overflow: hidden; /* Hide the overflow */
+  white-space: nowrap; /* Keep the text on one line */
+  border-right: 0.15em solid orange; /* Blinking cursor */
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end 3.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from {
+      width: 0; /* Start with no width */
+    }
+    to {
+      width: 100%; /* Expand to full width */
+    }
+  }
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent; /* Hide the cursor */
+    }
+    50% {
+      border-color: orange; /* Show the cursor */
+    }
+  }
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/*Icons*/
+
+.icon{
+    cursor: pointer;
+    height: 3rem;
+}
+
+.icon:hover{
+    transform: translateY(-5px) scale(1.1);
+}
+
+/*Buttons*/
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 500;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, .btn-color-2{
+    border: rgb(83,83,83) 0.1rem solid;
+}
+
+.btn-color-1:hover, .btn-color-2:hover{
+    cursor: pointer; 
+}
+
+.btn-color-1, .btn-color-2:hover{
+    background: rgb(0,0,0);
+    color: white; 
+}
+
+.btn-color-1:hover{
+    background:white;
+    color: black;
+}
+
+.btn-color-2{
+    background: none;
+}
